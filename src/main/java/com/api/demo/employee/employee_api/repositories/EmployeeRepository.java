@@ -10,7 +10,7 @@ import com.api.demo.employee.employee_api.models.Employee;
 
 public interface EmployeeRepository extends MongoRepository<Employee, String> {
 
-	Employee findBy_id(ObjectId _id);
+	Employee findBy_id(ObjectId _id)
 	Employee findByempId(Long empId);
 	
 	 @Query("{name : ?0}")
