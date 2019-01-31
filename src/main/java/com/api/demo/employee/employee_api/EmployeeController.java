@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.data.mongodb.core.query.BasicQuery;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,6 +23,7 @@ import com.api.demo.employee.employee_api.models.Employee;
 import com.api.demo.employee.employee_api.models.EmployeeNotFoundException;
 import com.api.demo.employee.employee_api.repositories.EmployeeRepository;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/employees")
 public class EmployeeController {
